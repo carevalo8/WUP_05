@@ -17,7 +17,11 @@ Females <- filter(mydata2,gender=="F") #Females becomes our reference data set
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
-A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the females, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
+A new  preventative aids drug (triUmpsal) is under test in clinical trials. Consider only the females, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
+  
+$H_O$ The Null Hypothesis is that there is no relationship between infection and one who receives the drug or the placebo.  
+$H_A$ The Alternative Hypothesis is that there is a relationship between infection and one who receives the drug  or the placebo.  
+
 
 # Methods
 
@@ -36,7 +40,9 @@ barchartGC(~infected + treatment,data=Females, type="percent")
 
 ```
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
-
+  
+ The bar graph above shows that the drug may make women more susceptible to contracting aids.
+ 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -59,3 +65,5 @@ fisher.test(table1)
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+  
+The p value from the Chi-squared test is 0.00007686 < 0.05, therefore we reject the null hypothesis. This indicates that there is a relationship between infection and one who receives the drug  or the placebo.
